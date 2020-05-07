@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: scaler
+  name: scaler
+  namespace: default
+spec:
+  containers:
+  - image: wbrefvem/scaler:0.0.2
+    imagePullPolicy: IfNotPresent
+    name: scaler
