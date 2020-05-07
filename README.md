@@ -12,3 +12,17 @@ WARNING: This grants blanket edit permissions to the default service account. DO
 $ kubectl apply -f clusterrolebinding.yaml
 $ kubectl apply -f pod.yaml
 ```
+
+### How to build
+
+Assuming you have Go 1.14 installed:
+
+```
+$ go build -o scaler .
+```
+
+We're using an in-cluster config here, so running it locally won't work. But if you want to try anyway:
+
+```
+$ go run .
+```
